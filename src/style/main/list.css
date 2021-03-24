@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+  overflow-x: hidden;
+}
+
+#navegation {
+  grid-area: ls;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#user {
+  height: 25%;
+}
+
+#names {
+  height: 65%;
+}
+
+#names ul {
+  height: 100%;
+  width: 100%;
+}
+
+#names ul li {
+  font-size: 1.3rem;
+  line-height: 50px;
+  cursor: pointer;
+  padding-left: 25%;
+}
+
+#names ul li:hover {
+  background-color: lightsteelblue;
+}
+
+#names ul li:active {
+  color: red;
+}
+
+#buttons {
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#buttons .btn {
+  width: 40px;
+  height: 40px;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+  background-color: lightslategrey;
+  cursor: pointer;
+}
+
+#buttons .btn:active {
+  background-color: lightcoral;
+}
+
+#buttons div:nth-child(1) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#buttons div:nth-child(2) {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+/*# sourceMappingURL=list.css.map */

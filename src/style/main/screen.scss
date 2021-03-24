@@ -1,0 +1,56 @@
+@import "../reset";
+
+#screen{
+    grid-area: sc;
+
+    #name-title{
+        width: 100%;
+        height: 100px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-transform: uppercase;
+    }
+    #images{
+        width: 100%;
+        height: 300px;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        text-transform: lowercase;
+
+        .img-childrens{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            img{
+                width: 250px;
+
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    #informations{
+        width: 100%;
+        height: 400px;
+
+        padding: 10px;
+
+        font-size: 1.3rem;
+
+        div{
+            height: 50%;
+
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+        }
+    }
+}

@@ -1,0 +1,67 @@
+@import "../reset";
+
+#navegation{
+    grid-area: ls;
+
+
+    display: flex;
+    flex-direction: column;
+}
+
+#user{
+    height: 25%;
+}
+
+#names{
+    height: 65%;
+
+    ul{
+        height: 100%;
+        width: 100%;
+
+        li{
+            font-size: 1.3rem;
+            line-height: 50px;
+            cursor: pointer;
+            padding-left: 25%;
+        }
+
+        li:hover{
+            background-color: lightsteelblue;
+        }
+
+        li:active{
+            color: red
+        }
+    }
+}
+
+#buttons{
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .btn{    
+        width: 40px;
+        height: 40px;
+
+        clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+
+        background-color: lightslategrey;
+
+        cursor: pointer;
+    }
+
+    .btn:active{
+        background-color: lightcoral;
+    }
+}
+
+#buttons div:nth-child(1){
+    transform: rotate(-45deg);
+}
+
+#buttons div:nth-child(2){
+    transform: rotate(135deg);
+}

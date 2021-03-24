@@ -1,0 +1,20 @@
+@import "reset";
+
+/*
+    ls: lista;
+    dt: screen
+*/
+
+#pokedex{
+    background: white;
+
+    width: 80%;
+    height: 800px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 100%;
+    grid-template-areas: "ls sc";
+} 
