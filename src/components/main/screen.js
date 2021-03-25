@@ -3,6 +3,8 @@ import '../../style/main/screen.css'
 import Unknown from '../../images/main/screen/unknown.jpg'
 
 export default function(props){
+    let  [numberPage, setNumberPage] = useState(1)
+
     const name = props.nameFromMain || "BULBASAUR"
     const indice = `${props.indiceFromMain}`
     
@@ -18,8 +20,8 @@ export default function(props){
                 const response1 = await fetch(`https://pokeapi.co/api/v2/pokemon/${props.nameFromMain}`)
                 const data1 = await response1.json()
                 setType(type = data1.types.map(value => value.type.name) || [] )
-                setImgNormal(imgNormal = data1.sprites.front_default || "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png")
-                setImgShyne(imgNormal = data1.sprites.front_shiny || "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png")
+                setImgNormal(imgNormal = data1.sprites.front_default || Unknown)
+                setImgShyne(imgNormal = data1.sprites.front_shiny || Unknown)
 
 
                 const response2 = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${props.nameFromMain}`)
@@ -31,19 +33,23 @@ export default function(props){
             }
         },[props])
 
+        const getNumber = (e) => {
+            setNumberPage(numberPage = Number(e.target.value))
+        }
+
     return(
         <div id="screen">
             <div id="name-title">
                 <h1>{`${indice || "#1 - "}${name}`}</h1>
             </div>
             <div id="images">
-                <div class="img-childrens">
+                <div className="img-childrens">
                 <img src={imgNormal}></img>
-                <span>{`${name} normal`}</span>
+                <span>normal</span>
                 </div>
-                <div class="img-childrens">
+                <div className="img-childrens">
                 <img src={imgShyne}></img>
-                <span>{`${name} shyne`}</span>
+                <span>shyne</span>
                 </div>
             </div>
             <div id="informations">
@@ -55,6 +61,14 @@ export default function(props){
                     <h2>Description:</h2>
                     <span>{description}</span>
                 </div>
+            </div>
+            <div id="pokedex-footer">
+                <input type="number" min="1" max="1118" placeholder="Type nº"onChange={(e) => getNumber(e)}/>
+                <button onClick={() => {
+                    props.goToFromMain(numberPage)
+
+
+                }}>Go to</button>
             </div>
         </div>
     )

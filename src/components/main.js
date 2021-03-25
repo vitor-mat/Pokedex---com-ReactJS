@@ -37,9 +37,34 @@ export default function(){
             }
         }
 
+        async function goTo(numberOfPage){
+
+            if(numberOfPage > 0  && numberOfPage < 1119){
+                try{
+                    const responsex = await fetch(`https://pokeapi.co/api/v2/pokemon/${(numberOfPage).toString()}`)
+                    const datax = await responsex.json()
+                    setName(name = datax.forms[0].name)
+                    setIndice(indice = `#${numberOfPage} - `)
+                }catch{
+                    alert("Your Pokémon is a variation. You will be redirected to the page, but you need to click on it to display the Pokémon")
+                }
+    
+    
+                if((numberOfPage).toString().split("").reverse()[0] == 0){
+                    setOffsetValue(offsetValue = 10 * (Math.floor(numberOfPage/10)) -1)  
+                }else{
+                    setOffsetValue(offsetValue = 10 * Math.floor(numberOfPage/10))
+                }
+            }else{
+                alert(("ERRO: Number Invalid!!"))
+            }
+    
+    }
+
         const getName = (value) => {
             setName(name = value)
         }
+
         const getIndice = (value) => {
             setIndice(indice = `#${value} - `)
         }
@@ -48,8 +73,9 @@ export default function(){
         <div id="pokedex">
             <List pokemonsNamesFromMain={pokemonsNames} pokemonsIndicesFromMain = {pokemonsIndices} 
             nextFucntionFromMain={next} beforeFucntionFromMain={before} 
-            getNameFromMain={getName} getIndiceFromMain={getIndice}/>
-            <Screen nameFromMain={name} indiceFromMain={indice}/>
+            getNameFromMain={getName} getIndiceFromMain={getIndice}
+            indiceSelectedFromMain={indice}/>
+            <Screen nameFromMain={name} indiceFromMain={indice} goToFromMain={goTo}/>
         </div>
     )
 }

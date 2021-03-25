@@ -17,14 +17,37 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #e3f7fa;
 }
 
 #user {
-  height: 25%;
+  width: 100%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #00eeff;
+}
+
+#user img {
+  width: auto;
+  height: 100px;
+}
+
+#user span {
+  line-height: 100px;
+  font-size: 4rem;
+  font-weight: 700;
 }
 
 #names {
-  height: 65%;
+  height: 500px;
 }
 
 #names ul {
@@ -48,7 +71,7 @@
 }
 
 #buttons {
-  height: 10%;
+  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,6 +80,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #00eeff;
 }
 
 #buttons .btn {
@@ -64,7 +88,7 @@
   height: 40px;
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
           clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
-  background-color: lightslategrey;
+  background-color: rgba(0, 0, 0, 0.856);
   cursor: pointer;
 }
 
@@ -80,5 +104,35 @@
 #buttons div:nth-child(2) {
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
+}
+
+@media (max-width: 1100px) {
+  #user {
+    height: 150px;
+  }
+  #user img {
+    width: auto;
+    height: 45px;
+  }
+  #user span {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  #names {
+    height: 500px;
+  }
+  #names ul {
+    height: 100%;
+    width: 100%;
+  }
+  #names ul li {
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding-left: 25%;
+  }
+  #buttons .btn {
+    width: 25px;
+    height: 25px;
+  }
 }
 /*# sourceMappingURL=list.css.map */

@@ -13,7 +13,7 @@
     dt: screen
 */
 #pokedex {
-  background: white;
+  background-color: #00eeff;
   width: 80%;
   height: 800px;
   margin: 0 auto;
@@ -24,5 +24,16 @@
   -ms-grid-rows: 100%;
       grid-template-rows: 100%;
       grid-template-areas: "ls sc";
+}
+
+@media (max-width: 1100px) {
+  #pokedex {
+    height: 1400px;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 40% 60%;
+        grid-template-rows: 40% 60%;
+        grid-template-areas: "ls" "sc";
+  }
 }
 /*# sourceMappingURL=main.css.map */

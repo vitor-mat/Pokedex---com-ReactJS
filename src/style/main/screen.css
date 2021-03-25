@@ -14,7 +14,7 @@
 
 #screen #name-title {
   width: 100%;
-  height: 100px;
+  height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,7 +29,7 @@
 
 #screen #images {
   width: 100%;
-  height: 300px;
+  height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,6 +39,7 @@
       -ms-flex-align: center;
           align-items: center;
   text-transform: lowercase;
+  background-color: #e3f7fa;
 }
 
 #screen #images .img-childrens {
@@ -55,15 +56,15 @@
 }
 
 #screen #images .img-childrens img {
-  width: 250px;
-  margin-bottom: 20px;
+  width: 170px;
 }
 
 #screen #informations {
   width: 100%;
-  height: 400px;
+  height: 300px;
   padding: 10px;
   font-size: 1.3rem;
+  background-color: #e3f7fa;
 }
 
 #screen #informations div {
@@ -76,5 +77,97 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#screen #pokedex-footer {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#screen #pokedex-footer input, #screen #pokedex-footer button {
+  border: none;
+}
+
+#screen #pokedex-footer input {
+  min-width: 200px;
+  height: 50px;
+  background: #686767;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+#screen #pokedex-footer input::-webkit-input-placeholder, #screen #pokedex-footer button, #screen #pokedex-footer input {
+  color: white;
+}
+
+#screen #pokedex-footer input:-ms-input-placeholder, #screen #pokedex-footer button, #screen #pokedex-footer input {
+  color: white;
+}
+
+#screen #pokedex-footer input::-ms-input-placeholder, #screen #pokedex-footer button, #screen #pokedex-footer input {
+  color: white;
+}
+
+#screen #pokedex-footer input::placeholder, #screen #pokedex-footer button, #screen #pokedex-footer input {
+  color: white;
+}
+
+#screen #pokedex-footer button {
+  width: 70px;
+  height: 50px;
+  background: black;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  #screen #name-title h1 {
+    font-size: 1.4rem;
+  }
+  #screen #informations {
+    height: 300px;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #e3f7fa;
+  }
+  #screen #informations div {
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #screen #pokedex-footer {
+    width: 100%;
+    height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #screen #pokedex-footer input, #screen #pokedex-footer button {
+    border: none;
+  }
+  #screen #pokedex-footer input {
+    width: 60%;
+    padding: 10px;
+  }
 }
 /*# sourceMappingURL=screen.css.map */
