@@ -53,7 +53,8 @@ Pelo promt de comando entre na pasta do projeto, em seguida rode o comando npm i
 - [Pokeapi](https://pokeapi.co/)
 
 ## Autor
-![autor](./src/images/Readme/autor.png)
+
+<img alt="author image" src="./src/images/Readme/autor.jpg" width="250"/>
 
 Feito por Vitor Mateus
 
